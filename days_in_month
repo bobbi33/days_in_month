@@ -1,0 +1,36 @@
+#include "stdafx.h"
+
+int main(){
+	int year = 0, mon = 0;
+
+	printf("Please give year\n");
+	scanf("%d", &year);
+	printf("Please give month\n");
+	scanf("%d",&mon);
+
+	if(mon == 2){
+		if((year%4 == 0) && (year % 100 != 0) || (year % 400 == 0)){
+			printf("this is RUN year!\n");
+			printf("Feb have 29 days\n");
+		}else{
+			printf("this is PING year!\n");
+			printf("Feb have 28 days\n");
+		}
+	}else if(mon <= 7){
+		if(mon %2 ==1){
+			printf("the %d month have 31 days\n",mon);
+		}else{
+			printf("the %d month have 30 days\n",mon);
+		}		
+	}else{
+		if(mon %2 == 1){
+			printf("the %d month have 30 days\n",mon);
+		}else{
+			printf("the %d month have 31 days\n",mon);
+		}
+	}
+
+
+	return 0;
+}
+
